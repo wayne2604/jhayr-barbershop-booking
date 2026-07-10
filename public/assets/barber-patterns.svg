@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="960" viewBox="0 0 960 960">
+  <g fill="none" stroke="#d4a853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.045">
+    <!-- Scissors (Top Left) -->
+    <g transform="translate(120, 140) rotate(-15) scale(3.6)">
+      <circle cx="12" cy="30" r="4" />
+      <circle cx="24" cy="30" r="4" />
+      <path d="M 12,26 L 18,18 L 24,2" />
+      <path d="M 24,26 L 18,18 L 12,2" />
+      <circle cx="18" cy="18" r="1" fill="#d4a853" />
+    </g>
+
+    <!-- Hair Clipper (Top Center-Right) -->
+    <g transform="translate(460, 80) rotate(-40) scale(3.6)">
+      <path d="M 12,35 L 14,12 C 14,10 22,10 22,12 L 24,35 Z" />
+      <path d="M 10,8 H 26 M 12,8 V 5 M 15,8 V 5 M 18,8 V 5 M 21,8 V 5 M 24,8 V 5" />
+      <path d="M 14,18 L 10,20" />
+      <circle cx="18" cy="27" r="1.5" fill="#d4a853" />
+    </g>
+
+    <!-- Comb (Top Right) -->
+    <g transform="translate(680, 140) rotate(35) scale(3.6)">
+      <path d="M 0,0 H 45 M 3,0 V 10 M 6,0 V 10 M 9,0 V 10 M 12,0 V 10 M 15,0 V 10 M 18,0 V 10 M 21,0 V 10 M 24,0 V 10 M 27,0 V 10 M 30,0 V 10 M 33,0 V 10 M 36,0 V 10 M 39,0 V 10 M 42,0 V 10" />
+    </g>
+
+    <!-- Spray Bottle (Center) -->
+    <g transform="translate(420, 380) rotate(15) scale(3.4)">
+      <path d="M 12,35 H 24 M 12,35 L 14,22 C 14,20 22,20 22,22 L 24,35 Z" />
+      <path d="M 17,20 V 16 H 19 V 20" />
+      <path d="M 19,16 H 24 L 26,14 M 17,16 L 15,19" />
+      <path d="M 17,13 H 21 V 16 H 17 Z" />
+    </g>
+
+    <!-- Barber Pole (Bottom Left) -->
+    <g transform="translate(100, 560) rotate(-12) scale(3.8)">
+      <path d="M 19,6 V 4 M 15,10 C 15,6 23,6 23,10 M 15,10 H 23 V 32 H 15 Z M 13,32 H 25 V 34 H 13 Z" />
+      <path d="M 15,14 L 23,19 M 15,20 L 23,25 M 15,26 L 23,31" />
+    </g>
+
+    <!-- Straight Razor (Bottom Center-Left) -->
+    <g transform="translate(380, 700) rotate(10) scale(3.8)">
+      <path d="M 5,25 Q 15,23 25,15" />
+      <path d="M 25,15 L 38,5 L 42,9 L 29,19 Z" />
+      <circle cx="25" cy="15" r="1" fill="#d4a853" />
+    </g>
+
+    <!-- Shaving Brush (Bottom Right) -->
+    <g transform="translate(720, 580) rotate(25) scale(3.6)">
+      <path d="M 12,30 H 24 V 32 H 12 Z M 12,30 C 12,24 16,24 16,20 H 20 C 20,24 24,24 24,30" />
+      <path d="M 16,20 C 14,14 10,12 10,8 H 26 C 26,12 22,14 20,20" />
+      <path d="M 15,14 L 14,9 M 18,17 V 8 M 21,14 L 22,9" />
+    </g>
+
+    <!-- Tiny decorative four-point stars -->
+    <!-- Star 1 (Left Middle) -->
+    <path d="M 280,304 L 284,316 L 296,320 L 284,324 L 280,336 L 276,324 L 264,320 L 276,316 Z" fill="#d4a853" stroke="none" />
+    <!-- Star 2 (Right Middle) -->
+    <path d="M 600,464 L 604,476 L 616,480 L 604,484 L 600,496 L 596,484 L 584,480 L 596,476 Z" fill="#d4a853" stroke="none" />
+
+    <!-- Tiny decorative circles/dots -->
+    <circle cx="200" cy="400" r="6" fill="#d4a853" stroke="none" />
+    <circle cx="620" cy="700" r="4" fill="#d4a853" stroke="none" />
+    <circle cx="300" cy="560" r="4.8" fill="#d4a853" stroke="none" />
+  </g>
+</svg>

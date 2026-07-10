@@ -2,7 +2,7 @@
 
 /* ─── Design Tokens (CSS Custom Properties) ─── */
 @theme {
-  --color-noir-bg: #0a0a0f;
+  --color-noir-bg: #121214;
   --color-noir-card: #12121a;
   --color-noir-surface: #0e0e14;
   --color-noir-gold: #d4a853;
@@ -11,7 +11,10 @@
   --color-noir-border: rgba(212, 168, 83, 0.15);
   --color-noir-glow: rgba(212, 168, 83, 0.25);
 
-  --font-family-outfit: "Outfit", sans-serif;
+  --font-family-outfit: "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "Fragment Mono", monospace;
 
   --perspective-near: 600px;
   --perspective-mid: 800px;
@@ -42,11 +45,20 @@
   }
 
   body {
-    font-family: "Outfit", sans-serif;
+    font-family: var(--font-sans);
     background-color: var(--color-noir-bg);
+    background-image: url('/assets/barber-patterns.svg');
+    background-size: 960px 960px;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-blend-mode: luminosity;
     color: #e5e5e5;
     overflow-x: hidden;
     line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
   }
 
   ::selection {

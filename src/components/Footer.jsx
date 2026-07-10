@@ -13,7 +13,7 @@ const socialIcons = [
 
 const Footer = () => {
   return (
-    <footer className="relative bg-[#0e0e14] font-['Outfit']">
+    <footer className="relative bg-transparent font-['Outfit']">
       {/* Gold accent line at top */}
       <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#d4a853] to-transparent" />
 

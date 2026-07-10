@@ -6,7 +6,7 @@ const Hero = () => {
   const dispatch = useDispatch();
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0a0f] font-['Outfit']">
+    <section className="relative min-h-screen flex items-start sm:items-center pt-28 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-transparent font-['Outfit']">
       {/* Radial glow backgrounds */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-[#d4a853]/5 blur-[120px]" />
@@ -16,28 +16,6 @@ const Hero = () => {
 
       {/* Floating decorative elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Floating gold circles */}
-        <div
-          className="absolute top-[15%] left-[10%] w-2 h-2 rounded-full bg-[#d4a853]/40"
-          style={{ animation: 'heroFloat 4s ease-in-out infinite' }}
-        />
-        <div
-          className="absolute top-[35%] left-[5%] w-1.5 h-1.5 rounded-full bg-[#c9944a]/30"
-          style={{ animation: 'heroFloat 5s ease-in-out 1s infinite' }}
-        />
-        <div
-          className="absolute top-[60%] left-[15%] w-1 h-1 rounded-full bg-[#d4a853]/50"
-          style={{ animation: 'heroFloat 3.5s ease-in-out 0.5s infinite' }}
-        />
-        <div
-          className="absolute top-[25%] right-[8%] w-2.5 h-2.5 rounded-full bg-[#d4a853]/20"
-          style={{ animation: 'heroFloat 6s ease-in-out 2s infinite' }}
-        />
-        <div
-          className="absolute bottom-[20%] left-[25%] w-1.5 h-1.5 rounded-full bg-[#c9944a]/35"
-          style={{ animation: 'heroFloat 4.5s ease-in-out 1.5s infinite' }}
-        />
-
         {/* Floating gold lines */}
         <div
           className="absolute top-[45%] left-[8%] w-8 h-[1px] bg-gradient-to-r from-transparent via-[#d4a853]/40 to-transparent"
@@ -54,24 +32,24 @@ const Hero = () => {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-12 -translate-y-6 lg:-translate-y-12">
         {/* Left — text content */}
         <div className="flex-1 max-w-xl" style={{ transform: 'translateZ(50px)' }}>
-          <p className="text-[#d4a853]/70 tracking-[0.35em] uppercase text-sm mb-4 font-light">
-            Premium Barbershop Experience
+          <p className="text-[#d4a853] tracking-[0.25em] uppercase text-xs sm:text-sm mb-4 font-semibold">
+            Luxury Grooming, Accessible Pricing
           </p>
 
           <h1
-            className="text-5xl md:text-7xl font-bold tracking-[0.06em] leading-[1.1] mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-[0.06em] leading-[1.1] mb-6"
             style={{
               background: 'linear-gradient(135deg, #d4a853 0%, #f5e6c8 40%, #c9944a 70%, #d4a853 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}
           >
-            THE ART
+            FIRST-CLASS STYLE
             <br />
-            OF GROOMING
+            EVERYDAY VALUE
           </h1>
 
           <p className="text-gray-400 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-md">
@@ -86,7 +64,7 @@ const Hero = () => {
               background: 'linear-gradient(135deg, #d4a853, #c9944a)',
             }}
           >
-            <span className="relative z-10">Book Now</span>
+            <span className="relative z-10">Reserve Your Chair</span>
             <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-[#d4a853]/40" />
           </button>
         </div>
@@ -98,7 +76,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0f] to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#121214] to-transparent pointer-events-none" />
 
       {/* Keyframes injected via style tag */}
       <style>{`
