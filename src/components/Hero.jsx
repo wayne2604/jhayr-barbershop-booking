@@ -47,14 +47,17 @@ const Hero = () => {
               WebkitTextFillColor: 'transparent',
             }}
           >
-            FIRST-CLASS STYLE
+            PRECISION.
             <br />
-            EVERYDAY VALUE
+            GROOMING.
+            <br />
+            REFINED STYLE.
           </h1>
 
           <p className="text-gray-400 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-md">
-            Where precision meets artistry. Elevate your style with master craftsmen
-            who sculpt confidence, one cut at a time.
+            Elevate your look with a curated experience. Our Master
+            barber focus on the finest detail, delivering confidence
+            you can feel, from start to finish.
           </p>
 
           <button
