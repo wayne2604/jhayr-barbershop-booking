@@ -2,30 +2,25 @@ import React, { useState } from 'react';
 
 export default function ImageAccordion() {
   const items = [
-    { 
-      id: 1, 
-      title: 'CORTE', 
-      imageUrl: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=600' 
+    {
+      id: 1,
+      title: 'CUT',
+      imageUrl: '/hero_images/first.JPG'
     },
-    { 
-      id: 2, 
-      title: 'LIMPIEZA', 
-      imageUrl: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=600' 
+    {
+      id: 2,
+      title: 'CLIPPER',
+      imageUrl: '/hero_images/second.JPG'
     },
-    { 
-      id: 3, 
-      title: 'AFEITADO', 
-      imageUrl: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80&w=600' 
+    {
+      id: 3,
+      title: 'CROP',
+      imageUrl: '/hero_images/third.JPG'
     },
-    { 
-      id: 4, 
-      title: 'HERRAMIENTAS', 
-      imageUrl: 'https://images.unsplash.com/photo-1512690117906-8d6951759245?auto=format&fit=crop&q=80&w=600' 
-    },
-    { 
-      id: 5, 
-      title: 'BARBA', 
-      imageUrl: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=600' 
+    {
+      id: 4,
+      title: 'CLEAN',
+      imageUrl: '/hero_images/fourth.JPG'
     },
   ];
 
@@ -57,19 +52,19 @@ export default function ImageAccordion() {
               />
 
               {/* Dark Overlay (Darkens unhovered cards to match your screenshots) */}
-              <div 
+              <div
                 className={`absolute inset-0 transition-colors duration-500
                   ${isHovered ? 'bg-black/10' : 'bg-black/40'}
-                `} 
+                `}
               />
 
               {/* Text Label Layer */}
-              <div 
+              <div
                 className={`absolute bottom-8 left-1/2 -translate-x-1/2 bg-neutral-900/90 text-white border border-[#d4a853]/30 px-6 py-2 shadow-xl transition-all duration-500 whitespace-nowrap z-10
                   ${isHovered ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-90'}
                 `}
               >
-                <span className="text-xs md:text-sm font-mono font-bold tracking-widest block text-center">
+                <span className="font-ibm text-xs md:text-sm font-bold tracking-widest block text-center">
                   {item.title}
                 </span>
               </div>

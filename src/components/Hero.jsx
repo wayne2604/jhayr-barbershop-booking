@@ -35,7 +35,7 @@ const Hero = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-12 -translate-y-6 lg:-translate-y-12">
         {/* Left — text content */}
         <div className="flex-1 max-w-xl" style={{ transform: 'translateZ(50px)' }}>
-          <p className="text-[#d4a853] tracking-[0.25em] uppercase text-xs sm:text-sm mb-4 font-semibold">
+          <p className="font-ibm text-[#d4a853] tracking-[0.25em] uppercase text-xs sm:text-sm mb-4 font-medium">
             Luxury Grooming, Accessible Pricing
           </p>
 
@@ -54,7 +54,7 @@ const Hero = () => {
             REFINED STYLE.
           </h1>
 
-          <p className="text-gray-400 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-md">
+          <p className="font-satoshi text-gray-400 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-md">
             Elevate your look with a curated experience. Our Master
             barber focus on the finest detail, delivering confidence
             you can feel, from start to finish.
@@ -62,7 +62,7 @@ const Hero = () => {
 
           <button
             onClick={() => dispatch(openModal())}
-            className="group relative px-10 py-4 rounded-lg font-semibold tracking-[0.15em] uppercase text-sm text-[#0a0a0f] transition-all duration-300 hover:scale-105 cursor-pointer"
+            className="font-satoshi group relative px-10 py-4 rounded-lg font-semibold tracking-[0.15em] uppercase text-sm text-[#0a0a0f] transition-all duration-300 hover:scale-105 cursor-pointer"
             style={{
               background: 'linear-gradient(135deg, #d4a853, #c9944a)',
             }}

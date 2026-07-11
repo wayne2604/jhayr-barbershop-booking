@@ -15,6 +15,9 @@
   --font-sans: "Inter", sans-serif;
   --font-serif: "Playfair Display", serif;
   --font-mono: "Fragment Mono", monospace;
+  --font-ibm: "IBM Plex Mono", monospace;
+  --font-satoshi: "Satoshi", "Satoshi Placeholder", sans-serif;
+  --font-playfair: "Playfair Display", "Playfair Display Placeholder", serif;
 
   --perspective-near: 600px;
   --perspective-mid: 800px;
@@ -82,6 +85,14 @@
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(212, 168, 83, 0.5);
   }
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 /* ─── Perspective Layer Utilities ─── */

@@ -1,10 +1,26 @@
 import React, { useEffect, useState } from 'react';
 
 const HAIR_PATHS = [
-  "M 2,2 C 10,8 1,18 12,28",
-  "M 18,2 C 2,6 18,15 4,23",
-  "M 5,2 Q 15,12 5,23",
-  "M 12,2 C 4,10 16,16 8,28"
+  {
+    path: "M 2,2 C 10,8 1.1,18 12,28 C 0.9,18 9.9,8 2,2 Z",
+    rootX: 2,
+    rootY: 2
+  },
+  {
+    path: "M 18,2 C 2.1,6 18.1,15 4,23 C 3.9,15 17.9,6 18,2 Z",
+    rootX: 18,
+    rootY: 2
+  },
+  {
+    path: "M 5,2 Q 15.1,12 5,23 Q 14.9,12 5,2 Z",
+    rootX: 5,
+    rootY: 2
+  },
+  {
+    path: "M 12,2 C 4.1,10 16.1,16 8,28 C 7.9,16 3.9,10 12,2 Z",
+    rootX: 12,
+    rootY: 2
+  }
 ];
 
 const HAIR_COLORS = [
@@ -27,8 +43,9 @@ export default function FallingHair() {
       const scale = 0.5 + Math.random() * 0.8; // 0.5x to 1.3x size
       const pathIndex = Math.floor(Math.random() * HAIR_PATHS.length);
       const color = HAIR_COLORS[Math.floor(Math.random() * HAIR_COLORS.length)];
-      const opacity = 0.2 + Math.random() * 0.45; // 20% to 65% opacity
+      const opacity = 0.5 + Math.random() * 0.4; // 50% to 90% opacity
       const swayDuration = 4 + Math.random() * 4; // 4s to 8s sway
+      const pathObj = HAIR_PATHS[pathIndex];
 
       return {
         id: i,
@@ -36,7 +53,9 @@ export default function FallingHair() {
         duration,
         delay,
         scale,
-        path: HAIR_PATHS[pathIndex],
+        path: pathObj.path,
+        rootX: pathObj.rootX,
+        rootY: pathObj.rootY,
         color,
         opacity,
         swayDuration
@@ -70,11 +89,15 @@ export default function FallingHair() {
               animation: `hair-sway ${hair.swayDuration}s ease-in-out infinite alternate`
             }}
           >
+            <circle
+              cx={hair.rootX}
+              cy={hair.rootY}
+              r="0.8"
+              fill="currentColor"
+            />
             <path
               d={hair.path}
-              stroke="currentColor"
-              strokeWidth="0.5"
-              strokeLinecap="round"
+              fill="currentColor"
             />
           </svg>
         </div>

@@ -7,11 +7,10 @@ import {
   resetBooking,
 } from '../store/bookingSlice';
 import { useState, useEffect } from 'react';
+import hensonImg from '../assets/henson.png';
 
 const barbers = [
-  { name: 'Marcus', title: 'Master Barber', icon: '🧑‍🦱' },
-  { name: 'Elena', title: 'Style Architect', icon: '👩‍🦰' },
-  { name: 'James', title: 'Fade Specialist', icon: '🧔' },
+  { name: 'Henson', title: 'Master Barber & Style Architect', image: hensonImg },
 ];
 
 const timeSlots = [
@@ -85,10 +84,11 @@ const Booking = () => {
     >
       {/* Modal container with t-modal transition classes */}
       <div
-        className={`t-modal relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl border border-[#d4a853]/20 glass-strong shadow-3d-lg ${
+        className={`t-modal relative w-full max-w-lg max-h-[90vh] overflow-y-auto no-scrollbar rounded-2xl border border-[#d4a853]/20 shadow-3d-lg ${
           isOpenState ? 'is-open' : ''
         } ${isClosingState ? 'is-closing' : ''}`}
         style={{
+          background: '#121214',
           boxShadow: '0 25px 80px rgba(0,0,0,0.6), 0 0 60px rgba(212,168,83,0.08)',
         }}
         data-motion-id="booking-dialog"
@@ -158,7 +158,7 @@ const Booking = () => {
                   BOOK YOUR SESSION
                 </h2>
                 {selectedService && (
-                  <p className="mt-2 text-[#d4a853] text-sm tracking-wider font-medium">
+                  <p className="font-satoshi mt-2 text-[#d4a853] text-sm tracking-wider font-medium">
                     ✦ {selectedService}
                   </p>
                 )}
@@ -178,42 +178,61 @@ const Booking = () => {
 
               {/* Barber selection */}
               <div className="mb-6 pb-6 border-b border-white/5">
-                <h3 className="text-white text-sm font-semibold tracking-[0.1em] uppercase mb-4">
+                <h3 className="font-ibm text-white text-sm font-normal tracking-[0.1em] uppercase mb-4 text-center">
                   Choose Your Barber
                 </h3>
-                <div className="grid grid-cols-3 gap-3">
+                <div className="flex justify-center">
                   {barbers.map((barber) => {
                     const isSelected = selectedBarber === barber.name;
                     return (
                       <button
                         key={barber.name}
                         onClick={() => dispatch(setBarber(barber.name))}
-                        className="relative flex flex-col items-center p-4 rounded-xl border transition-all duration-300 cursor-pointer"
+                        className="group relative flex flex-col items-center w-64 p-6 rounded-2xl border transition-all duration-500 cursor-pointer"
                         style={{
                           background: isSelected
-                            ? 'rgba(212, 168, 83, 0.08)'
-                            : 'rgba(255, 255, 255, 0.03)',
+                            ? 'rgba(212, 168, 83, 0.06)'
+                            : 'rgba(255, 255, 255, 0.02)',
                           borderColor: isSelected
-                            ? 'rgba(212, 168, 83, 0.5)'
-                            : 'rgba(255, 255, 255, 0.08)',
+                            ? 'rgba(212, 168, 83, 0.4)'
+                            : 'rgba(255, 255, 255, 0.05)',
                           boxShadow: isSelected
-                            ? '0 0 25px rgba(212, 168, 83, 0.15)'
+                            ? '0 10px 30px rgba(212, 168, 83, 0.1)'
                             : 'none',
-                          transform: isSelected ? 'translateY(-4px)' : 'translateY(0)',
+                          transform: isSelected ? 'translateY(-6px)' : 'translateY(0)',
                         }}
                       >
-                        <span className="text-2xl mb-2">{barber.icon}</span>
-                        <span className={`text-sm font-semibold ${isSelected ? 'text-[#d4a853]' : 'text-white'}`}>
+                        {/* Henson's Photo container */}
+                        <div 
+                          className={`w-24 h-24 rounded-full overflow-hidden border mb-4 transition-all duration-500
+                            ${isSelected 
+                              ? 'border-[#d4a853] shadow-[0_0_20px_rgba(212,168,83,0.3)] scale-105' 
+                              : 'border-white/10 group-hover:border-[#d4a853]/50'
+                            }
+                          `}
+                        >
+                          <img
+                            src={barber.image}
+                            alt={barber.name}
+                            className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                          />
+                        </div>
+
+                        <span className={`font-playfair text-base font-bold tracking-wide ${isSelected ? 'text-[#d4a853]' : 'text-white'}`}>
                           {barber.name}
                         </span>
-                        <span className="text-[10px] text-gray-500 mt-0.5 text-center leading-tight">
+                        <span className="text-xs text-gray-500 mt-1 text-center font-light font-satoshi leading-tight">
                           {barber.title}
                         </span>
+                        
                         {isSelected && (
-                          <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#d4a853] flex items-center justify-center">
-                            <span className="text-[#0a0a0f] text-[10px] font-bold">✓</span>
+                          <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-[#d4a853] flex items-center justify-center shadow-lg">
+                            <span className="text-[#0a0a0f] text-xs font-extrabold">✓</span>
                           </div>
                         )}
+                        
+                        {/* Accent top gold border highlight */}
+                        <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#d4a853]/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </button>
                     );
                   })}
@@ -232,7 +251,7 @@ const Booking = () => {
                       <button
                         key={time}
                         onClick={() => dispatch(setTime(time))}
-                        className="py-2.5 px-3 rounded-lg text-sm font-medium transition-all duration-300 cursor-pointer"
+                        className="font-satoshi py-2.5 px-3 rounded-lg text-sm font-medium transition-all duration-300 cursor-pointer"
                         style={{
                           background: isSelected
                             ? 'linear-gradient(135deg, #d4a853, #c9944a)'
@@ -285,7 +304,7 @@ const Booking = () => {
               {/* Selection summary */}
               {isComplete && (
                 <div className="mt-4 p-3 rounded-lg bg-[#d4a853]/5 border border-[#d4a853]/10">
-                  <p className="text-gray-400 text-xs text-center">
+                  <p className="font-ibm text-gray-400 text-xs text-center">
                     <span className="text-[#d4a853]">{selectedService}</span> with{' '}
                     <span className="text-[#d4a853]">{selectedBarber}</span> at{' '}
                     <span className="text-[#d4a853]">{selectedTime}</span>

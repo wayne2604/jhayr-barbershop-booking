@@ -124,7 +124,7 @@ export default function AnimatedNavFramer() {
             alt="Jhay Barber Shop"
             className="h-6 w-6 object-contain"
           />
-          <span className="text-sm font-semibold tracking-[0.15em] text-white/90 transition-colors duration-300">
+          <span className="font-playfair text-sm font-semibold tracking-[0.15em] text-white/90 transition-colors duration-300">
             JHAY
           </span>
         </motion.div>
@@ -141,7 +141,7 @@ export default function AnimatedNavFramer() {
               href={item.href}
               variants={itemVariants}
               onClick={(e) => e.stopPropagation()}
-              className="text-xs font-semibold tracking-wider text-white/60 hover:text-[#d4a853] transition-colors px-2.5 py-1"
+              className="font-playfair text-xs font-semibold tracking-wider text-white/60 hover:text-[#d4a853] transition-colors px-2.5 py-1"
             >
               {item.name}
             </motion.a>

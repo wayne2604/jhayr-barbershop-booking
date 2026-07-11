@@ -1,5 +1,8 @@
 import Hero from './components/Hero';
 import Services from './components/Services';
+import Gallery from './components/Gallery';
+import About from './components/About';
+import Contact from './components/Contact';
 import Booking from './components/Booking';
 import Footer from './components/Footer';
 import AnimatedNavFramer from './components/AnimatedNavFramer';
@@ -24,6 +27,9 @@ export default function App() {
       <main className="relative z-10">
         <Hero />
         <Services />
+        <Gallery />
+        <About />
+        <Contact />
       </main>
 
       {/* ── Footer ── */}
