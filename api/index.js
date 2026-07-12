@@ -181,7 +181,7 @@ app.post('/api/book', async (req, res) => {
 
   try {
     if (!process.env.EMAIL_PASS) {
-      console.warn("WARNING: EMAIL_PASS is not configured in .env. Email sending will be skipped.");
+      console.warn("WARNING: EMAIL_PASS is not configured in environment. Email sending will be skipped.");
       return res.status(200).json({ 
         success: true, 
         message: 'Booking saved successfully (email skipped because EMAIL_PASS is not set).' 
@@ -196,4 +196,9 @@ app.post('/api/book', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+// Listen only when running locally (not in Vercel Serverless environment)
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+  app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+}
+
+export default app;
