@@ -22,3 +22,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local Environment Secrets
+.env
+.env.local
+
+# Temporary/Scratch Files
+models.txt
+models2.txt
+
+# Design and Reference Screenshots
+screenshot/
+

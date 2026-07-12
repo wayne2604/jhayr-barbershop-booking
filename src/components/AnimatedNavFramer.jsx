@@ -13,7 +13,7 @@ function cn(...inputs) {
 const navItems = [
   { name: "SERVICES", href: "#services" },
   { name: "GALLERY", href: "#gallery" },
-  { name: "ABOUT", href: "#about" },
+  { name: "ABOUT", href: "#about-us" },
   { name: "CONTACT", href: "#contact" },
 ];
 

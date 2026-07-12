@@ -2,54 +2,20 @@ import React from 'react';
 import { CylinderCarousel } from './ui/cylinder-carousel';
 
 const IMAGES = [
-  {
-    src: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=600',
-    alt: 'The Master Cut',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=600',
-    alt: 'Precision Detailing',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80&w=600',
-    alt: 'Classic Straight Razor',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1512690117906-8d6951759245?auto=format&fit=crop&q=80&w=600',
-    alt: 'Crafted Tools',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&q=80&w=600',
-    alt: 'Modern Fade',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=600',
-    alt: 'The Classic Shop',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1517832606299-7ae9b620a186?auto=format&fit=crop&q=80&w=600',
-    alt: 'Barber Supplies',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1593702288056-ccbfb434446b?auto=format&fit=crop&q=80&w=600',
-    alt: 'Shop Interior',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=600',
-    alt: 'Hair Styling',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1520338661084-ce39c1048b61?auto=format&fit=crop&q=80&w=600',
-    alt: 'Professional Trim',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1508898578281-774ac4893c0c?auto=format&fit=crop&q=80&w=600',
-    alt: 'Barber Chair',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1633364951167-27b2b0a94b57?auto=format&fit=crop&q=80&w=600',
-    alt: 'Sharp Edges',
-  },
+  { src: '/gallery/09a532c7-0f92-42a1-be2b-cd6069cc1341.jpg', alt: 'Gallery Image 1' },
+  { src: '/gallery/25faf7d2-2c72-4f40-89da-b091c7f5e98e.jpg', alt: 'Gallery Image 2' },
+  { src: '/gallery/35e14792-5c3c-4fb0-8fd6-d5b7e4e52c5e.jpg', alt: 'Gallery Image 3' },
+  { src: '/gallery/3ef73e85-b132-4ffc-8580-ee66f819e25d.jpg', alt: 'Gallery Image 4' },
+  { src: '/gallery/52576474-bb08-447c-9109-f3370f5103a7.jpg', alt: 'Gallery Image 5' },
+  { src: '/gallery/669a7fc8-0070-49a7-8220-0a10b8fd33d9.jpg', alt: 'Gallery Image 6' },
+  { src: '/gallery/7d45eeba-399f-4d6c-80fe-78c16793c6b7.jpg', alt: 'Gallery Image 7' },
+  { src: '/gallery/98d77452-0c18-4254-9265-52b285f73ac4.jpg', alt: 'Gallery Image 8' },
+  { src: '/gallery/IMG_2316.png', alt: 'Gallery Image 9' },
+  { src: '/gallery/c2eb5724-cc5b-45f3-b733-fc1ad0c13a79.jpg', alt: 'Gallery Image 10' },
+  { src: '/gallery/d1981e8a-66cd-4a2f-a220-4294c9f6ce26.jpg', alt: 'Gallery Image 11' },
+  { src: '/gallery/f627d65a-a962-42c6-9faa-884e81b90930.jpg', alt: 'Gallery Image 12' },
+  { src: '/gallery/fdf81ce6-977b-410a-89fe-03698c1b7595.jpg', alt: 'Gallery Image 13' },
+  { src: '/gallery/291c8a06-ded0-4128-aab0-506c2bb91d06.jpg', alt: 'Gallery Image 14' },
 ];
 
 export default function Gallery() {

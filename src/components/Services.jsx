@@ -49,7 +49,7 @@ const Services = () => {
   };
 
   return (
-    <section className="relative py-24 px-6 lg:px-12 bg-transparent font-['Outfit']">
+    <section id="services" className="relative py-24 px-6 lg:px-12 bg-transparent font-['Outfit']">
       {/* Subtle background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#d4a853]/[0.03] blur-[150px] pointer-events-none" />
 
@@ -80,7 +80,7 @@ const Services = () => {
               onClick={() => handleServiceClick(service.name)}
               className="group relative cursor-pointer rounded-xl border-l-[3px] border-l-[#d4a853]/40 border border-white/5 backdrop-blur-sm transition-all duration-500 hover:border-[#d4a853]/60 hover:border-l-[#d4a853] hover:shadow-[0_8px_40px_rgba(212,168,83,0.15)]"
               style={{
-                background: '#121214',
+                background: 'rgba(18, 18, 20, 0.6)',
                 perspective: '800px',
                 transform: 'rotateX(2deg) rotateY(-3deg)',
                 transition: 'all 500ms cubic-bezier(0.23, 1, 0.32, 1)',
@@ -100,6 +100,14 @@ const Services = () => {
                   borderLeft: '40px solid transparent',
                   borderTop: '40px solid rgba(212, 168, 83, 0.3)',
                   borderRadius: '0 0.75rem 0 0',
+                }}
+              />
+
+              {/* Gold dot grid background pattern */}
+              <div 
+                className="absolute inset-0 bg-repeat bg-center opacity-10 bg-[size:20px_20px] pointer-events-none rounded-xl"
+                style={{
+                  backgroundImage: 'radial-gradient(rgba(212, 168, 83, 0.4) 1px, transparent 1px)',
                 }}
               />
 
