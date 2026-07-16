@@ -14,7 +14,8 @@ const socialIcons = [
         <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
       </svg>
     ),
-    label: 'Facebook'
+    label: 'Facebook',
+    link: 'https://www.facebook.com/henson.loquez'
   },
   {
     icon: (
@@ -22,7 +23,8 @@ const socialIcons = [
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
       </svg>
     ),
-    label: 'X'
+    label: 'X',
+    link: '#'
   },
   {
     icon: (
@@ -30,7 +32,8 @@ const socialIcons = [
         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
       </svg>
     ),
-    label: 'Instagram'
+    label: 'Instagram',
+    link: '#'
   },
   {
     icon: (
@@ -38,7 +41,8 @@ const socialIcons = [
         <path d="M0 3v18h24v-18h-24zm6.623 7.928l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.928h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.89l5.624-6.812zm9.201-1.464l4.623-3.761v9.484l-4.623-5.723z" />
       </svg>
     ),
-    label: 'Gmail'
+    label: 'Gmail',
+    link: 'mailto:jhaybarber@gmail.com'
   },
 ];
 
@@ -94,13 +98,16 @@ const Footer = () => {
             {/* Social icons */}
             <div className="flex gap-3">
               {socialIcons.map((social) => (
-                <button
+                <a
                   key={social.label}
+                  href={social.link}
+                  target={social.link && social.link !== '#' && !social.link.startsWith('mailto:') ? "_blank" : undefined}
+                  rel={social.link && social.link !== '#' && !social.link.startsWith('mailto:') ? "noopener noreferrer" : undefined}
                   aria-label={social.label}
                   className="w-10 h-10 rounded-full flex items-center justify-center text-[#d4a853]/60 border border-[#d4a853]/15 bg-white/[0.03] hover:bg-[#d4a853]/10 hover:border-[#d4a853]/40 hover:text-[#d4a853] transition-all duration-300 cursor-pointer"
                 >
                   <span className="text-sm">{social.icon}</span>
-                </button>
+                </a>
               ))}
             </div>
           </div>

@@ -4,37 +4,37 @@ import { setService, openModal } from '../store/bookingSlice';
 const services = [
   {
     name: 'Classic Cut',
-    price: 35,
+    price: 50,
     icon: '/services_images/scissors-svgrepo-com.svg',
     description: 'Timeless precision cut tailored to your face shape and personal style.',
   },
   {
     name: 'Beard Sculpt',
-    price: 25,
+    price: 50,
     icon: '/services_images/grinding-beard-svgrepo-com.svg',
     description: 'Expert beard shaping and detailing for the distinguished gentleman.',
   },
   {
     name: 'Hot Towel Shave',
-    price: 40,
+    price: 50,
     icon: '/services_images/straight-razor-svgrepo-com.svg',
     description: 'Luxurious straight-razor shave with hot towels and premium oils.',
   },
   {
     name: 'Hair & Beard Combo',
-    price: 55,
+    price: 50,
     icon: '/services_images/barber-pole-svgrepo-com.svg',
     description: 'Complete grooming package — precision cut paired with beard sculpting.',
   },
   {
     name: 'Fade Mastery',
-    price: 45,
+    price: 50,
     icon: '/services_images/razor-barber-svgrepo-com.svg',
     description: 'Seamless gradient fades from skin to length, crafted to perfection.',
   },
   {
     name: 'Premium Package',
-    price: 85,
+    price: 300,
     icon: '/services_images/crown-svgrepo-com.svg',
     description: 'The ultimate experience — cut, shave, facial treatment, and styling.',
   },
@@ -144,7 +144,7 @@ const Services = () => {
                       WebkitTextFillColor: 'transparent',
                     }}
                   >
-                    ${service.price}
+                    ₱{service.price}
                   </span>
                   <span className="font-satoshi text-gray-500 text-sm font-light">/session</span>
                 </div>

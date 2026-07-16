@@ -167,11 +167,11 @@ const Booking = () => {
                   WebkitTextFillColor: 'transparent',
                 }}
               >
-                BOOKING CONFIRMED!
+                REQUEST SENT!
               </h3>
               
               <p className="text-gray-400 text-sm font-light leading-relaxed mb-8 max-w-xs">
-                Your session for a <span className="text-[#d4a853] font-medium">{selectedService}</span> with <span className="text-[#d4a853] font-medium">{selectedBarber}</span> at <span className="text-[#d4a853] font-medium">{selectedTime}</span> is officially secured.
+                Your request for a <span className="text-[#d4a853] font-medium">{selectedService}</span> with <span className="text-[#d4a853] font-medium">{selectedBarber}</span> at <span className="text-[#d4a853] font-medium">{selectedTime}</span> is pending approval. You will receive an email once approved by the barber.
               </p>
 
               <button
